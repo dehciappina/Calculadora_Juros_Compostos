@@ -23,7 +23,7 @@ body {
 }
 
 .main_header > img {
-    height: 55px;
+    height: 50px;
     position: absolute;
     left: calc(10px + 5%);
 }
