@@ -38,14 +38,14 @@ body {
     right: 95%;
     top: 10px;
     transform: translateX(100%);
-    transition: var(--default-transition);
+    transition: 0.3s 0.2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
 .main_header_img_right {
     transform: translateX(0) !important;
     right: calc(10px + 5%) !important;
     top: 80px !important;
-    height: 75px !important;
+    height: 65px !important;
 }
 
 .hamburguer {
@@ -184,7 +184,7 @@ body {
 .menu_show {
     opacity: 1;
     visibility: visible;
-    transition:0.7s 0.2s ease;
+    transition:0.7s 0.4s ease;
     transform:translateY(0%);
 }
 
