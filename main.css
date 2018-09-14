@@ -1,0 +1,119 @@
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body, p, h1, h2, h3, h4, h5, h6 {
+    margin:0;
+}
+
+body {
+    width:100vw;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.main_header {
+    height: 70px;
+    min-width: 360px;
+    width: 100%;
+    background: linear-gradient(60deg, #F4E200, #EDBC00);
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.main_header > img {
+    height: 55px;
+    position: absolute;
+    left: calc(10px + 5%);
+}
+
+.hamburguer {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    right:calc(10px + 5%);
+}
+
+.hamburguer div {
+    position: absolute;
+    width: 40px;
+    height: 7px;
+    background: #111;
+    border-radius: 2px;
+}
+
+.hamburguer div:first-child {
+    top: 0;
+}
+
+.hamburguer div:nth-child(2) {
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+.hamburguer div:last-child {
+    top:100%;
+    transform: translateY(-100%);
+}
+
+.main_container {
+    background:linear-gradient(0deg,#9BD5DE, #00838F);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.main_container > h2 {
+    font-size: 34px;
+    color: white;
+    width: 300px;
+    margin: 50px 0;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+}
+
+.calc_options {
+    width: 340px;
+    height: 285px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.calc_options > article {
+    max-width: 340px;
+    width: 80vw;
+    height: 55px;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 -6px white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.calc_options > article img {
+    height: 50%;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    cursor: pointer;
+}
+
+.calc_options > article p {
+    color:white;
+    position: absolute;
+    left: 22px;
+    font-size:22px;
+}
