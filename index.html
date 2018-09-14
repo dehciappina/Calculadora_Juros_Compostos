@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <header class="main_header">
-        <img src="assets/title.svg" alt="">
+    <section class="calc_container">
+        <article class="selects">
+            <div>
+                <span>Calcular:</span>
+                <select name="calcular" id="">
+                    <option value="taxa_juros">Taxa de Juros</option>
+                </select>
+            </div>
 
-        <div class="hamburguer">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </header>
-    <main class="main_container">
-        <h2>O que deseja calcular?</h2>
-        <section class="calc_options">
-            <article>
-                <p>Taxa de Juros</p>
-                <img src="assets/info.svg" alt="informação sobre a planilha">
-            </article>
+            <div>
+                <span>Tipo de Cálculo:</span>
+                <select name="tipo_calculo" id="">
+                    <option value="juros_compostos">Juros Compostos</option>
+                </select>
+            </div>
+        </article>
 
-            <article>
-                    <p>Valor da Parcela</p>
-                <img src="assets/info.svg" alt="informação sobre a planilha">
-            </article>
+        <input class="white_inputs" type="number" name="valor_presente" id="valor_presente" placeholder="Valor Presente (PV)">
 
-            <article>
-                    <p>Valor Presente</p>
-                <img src="assets/info.svg" alt="informação sobre a planilha">
-            </article>
+        <input class="white_inputs" type="number" name="valor_parcela" id="valor_parcela" placeholder="Valor da Parcela (M)">
 
-            <article>
-                    <p>Valor Futuro</p>
-                <img src="assets/info.svg" alt="informação sobre a planilha">
-            </article>
-        </section>
-    </main>
+        <input class="white_inputs" type="number" name="n_parcelas" id="n_parcelas" placeholder="Nº de Parcelas (n)">
+        
+        <input class="white_inputs" type="number" name="valor_futuro" id="valor_futuro" placeholder="Valor Futuro (FV)">
+
+        <input type="button" value="Calcular" class="play_calculo">
+    </section>
 </body>
 </html>
