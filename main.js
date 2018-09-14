@@ -1,31 +1,23 @@
-let botaoCalcular = document.querySelector('.play_calculo');
+let hamburguer = document.querySelector('.hamburguer')
 
-let pv = document.querySelector('#valor_presente');
-let n = document.querySelector('#n_parcelas');
-let valorParcela = document.querySelector('#valor_parcela');
+let hamburguer1 = document.querySelector('.hamburguer div:first-child')
+let hamburguer2 = document.querySelector('.hamburguer div:nth-child(2)')
+let hamburguer3 = document.querySelector('.hamburguer div:last-child')
 
-let soma = 0;
-let i = 0;
+let logo = document.querySelector('.main_header > img')
+let mainHeader = document.querySelector('.main_header')
 
-function calcular() {
+let headerMenu = document.querySelector('.header_menu')
 
 
-    pvValue = Number(pv.value);
-    nValue = Number(n.value);
-    valorParcelaValue = Number(valorParcela.value);
+hamburguer.addEventListener('click', function() {
+    logo.classList.toggle('main_header_img_right')
+    mainHeader.classList.toggle('main_header_clicked')
 
-    console.log(pvValue);
-    console.log(valorParcelaValue);
-    console.log(nValue);
+    hamburguer1.classList.toggle('top_burger')
+    hamburguer2.classList.toggle('mid_burger')
+    hamburguer3.classList.toggle('bot_burger')
 
-    while(soma < valorParcelaValue) {
-        i = i + 0.00001;
-        soma = (((1 + i) ** nValue * i / 100) / ((1 + i) ** nValue - 1)) * pvValue
-        // soma = pvValue + nValue + valorParcelaValue;
-        console.log(i)
-    }
-    
-    alert(i*100)
-}
+    headerMenu.classList.toggle('menu_show')
+})
 
-botaoCalcular.addEventListener('click', calcular)

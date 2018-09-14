@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <section class="calc_container">
-        <article class="selects">
-            <div>
-                <span>Calcular:</span>
-                <select name="calcular" id="">
-                    <option value="taxa_juros">Taxa de Juros</option>
-                </select>
-            </div>
+    <header class="main_header">
+        <img src="assets/title.svg" alt="">
 
-            <div>
-                <span>Tipo de Cálculo:</span>
-                <select name="tipo_calculo" id="">
-                    <option value="juros_compostos">Juros Compostos</option>
-                </select>
-            </div>
-        </article>
-
-        <input class="white_inputs" type="number" name="valor_presente" id="valor_presente" placeholder="Valor Presente (PV)">
-
-        <input class="white_inputs" type="number" name="valor_parcela" id="valor_parcela" placeholder="Valor da Parcela (M)">
-
-        <input class="white_inputs" type="number" name="n_parcelas" id="n_parcelas" placeholder="Nº de Parcelas (n)">
+        <div class="hamburguer">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         
-        <input class="white_inputs" type="number" name="valor_futuro" id="valor_futuro" placeholder="Valor Futuro (FV)">
+        <nav class="header_menu">
+            <button>Opções</button>
+            <button>Desenvolvedores</button>
+            <button>Retirar Publicidade</button>
+            <button>Ajuda</button>
+        </nav>
+    </header>
+    <main class="main_container">
+        <h2>O que deseja calcular?</h2>
+        <section class="calc_options">
+            <article>
+                <p>Taxa de Juros</p>
+                <img src="assets/info.svg" alt="informação sobre a planilha">
+            </article>
 
-        <input type="button" value="Calcular" class="play_calculo">
-    </section>
+            <article>
+                    <p>Valor da Parcela</p>
+                <img src="assets/info.svg" alt="informação sobre a planilha">
+            </article>
+
+            <article>
+                    <p>Valor Presente</p>
+                <img src="assets/info.svg" alt="informação sobre a planilha">
+            </article>
+
+            <article>
+                    <p>Valor Futuro</p>
+                <img src="assets/info.svg" alt="informação sobre a planilha">
+            </article>
+        </section>
+    </main>
 </body>
 </html>
