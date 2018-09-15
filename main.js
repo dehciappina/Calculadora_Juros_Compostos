@@ -26,6 +26,7 @@ let taxaJurosBotao = document.querySelector('#taxaJuros')
 let valorParcelaBotao = document.querySelector('#valorParcela')
 let valorPresenteBotao = document.querySelector('#valorPresente')
 let valorFuturoBotao = document.querySelector('#valorFuturo')
+let calculator = document.querySelector('.calculator')
 
 taxaJurosBotao.addEventListener('click', function() {
     mainContainerH2.classList.toggle('main_container_h2_hidden')
@@ -33,14 +34,15 @@ taxaJurosBotao.addEventListener('click', function() {
     valorPresenteBotao.classList.toggle('hidden_main_container_article')
     valorFuturoBotao.classList.toggle('hidden_main_container_article')
 
-    setTimeout(function() {
+    taxaJurosBotao.classList.toggle('calc_option_ontop')
+    calculator.classList.toggle('calculator_show')
 
-        taxaJurosBotao.classList.toggle('calc_option_ontop')
-    },300)
+    // setTimeout(function() {
+    // },300)
 
 
 })
 
-// setTimeout(function() {
-//     taxaJurosBotao.click()
-// },300)
+setTimeout(function() {
+    taxaJurosBotao.click()
+},300)
