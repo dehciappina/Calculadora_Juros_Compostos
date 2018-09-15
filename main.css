@@ -243,7 +243,8 @@ body {
 }
 
 .calculator {
-    width: 340px;
+    max-width: 340px;
+    width: 80vw;
     height: 340px;
     position: absolute;
     display: flex;
@@ -297,10 +298,13 @@ body {
     align-items: center;
     width: 340px;
     padding: 0;
+    max-width: 340px;
+    width: 80vw;
 }
 
 .calculator > button > div {
-    width: 320px;
+    max-width: 320px;
+    width: 75vw;
     background: white;
     height: 60px;
     display: flex;
