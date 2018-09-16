@@ -37,10 +37,10 @@ body {
 }
 
 .main_header > img {
-    height: 50px;
+    height: 60px;
     position: absolute;
     right: 95%;
-    top: 10px;
+    top: 5px;
     transform: translateX(100%);
     transition: 0.3s 0.2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
