@@ -46,8 +46,8 @@ body {
 }
 
 .main_header_img_right {
-    transform: translateX(0) !important;
-    right: calc(10px + 5%) !important;
+    transform: translateX(50%) !important;
+    right: 50% !important;
     top: 80px !important;
     height: 65px !important;
 }
@@ -193,6 +193,12 @@ body {
     right: 0;
     bottom:0;
     cursor: pointer;
+    transition:var(--default-transition-2);
+}
+
+.img_disappear {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .calc_options > article p {
@@ -270,7 +276,7 @@ body {
 }
 
 
-.calculator  input {
+.calculator input {
     height: 55px;
     padding: 10px;
     box-sizing: border-box;
@@ -280,6 +286,7 @@ body {
     border: none;
     color: white;
     font-family: 'Share Tech Mono', monospace;
+    width: 100%;
 }
 
 .calculator > p {
@@ -304,7 +311,7 @@ body {
 
 .calculator > button > div {
     max-width: 320px;
-    width: 75vw;
+    width: 92%;
     background: white;
     height: 60px;
     display: flex;
@@ -315,6 +322,41 @@ body {
 .calculator > button > div > img {
     width: 40px;
 }
+
+
+
+.input {
+    height: 55px;
+    width: 100%;
+}
+
+.input div {
+    width: 8px;
+    background: rgba(255,255,255,0.5);
+    height: 55px;
+    position: absolute;
+    transform: skewY(50deg) translateY(5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ::placeholder {
     color:rgba(255,255,255,0.9);

@@ -21,12 +21,28 @@ hamburguer.addEventListener('click', function() {
     headerMenu.classList.toggle('menu_show')
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 let mainContainerH2 = document.querySelector('.main_container > h2')
 let taxaJurosBotao = document.querySelector('#taxaJuros')
 let valorParcelaBotao = document.querySelector('#valorParcela')
 let valorPresenteBotao = document.querySelector('#valorPresente')
 let valorFuturoBotao = document.querySelector('#valorFuturo')
 let calculator = document.querySelector('.calculator')
+
+let pTaxaJ = document.querySelector('#taxaJuros p')
+let imgTaxaJ = document.querySelector('#taxaJuros img')
 
 taxaJurosBotao.addEventListener('click', function() {
     mainContainerH2.classList.toggle('main_container_h2_hidden')
@@ -36,13 +52,19 @@ taxaJurosBotao.addEventListener('click', function() {
 
     taxaJurosBotao.classList.toggle('calc_option_ontop')
     calculator.classList.toggle('calculator_show')
+    imgTaxaJ.classList.toggle('img_disappear')
 
     // setTimeout(function() {
     // },300)
 
-
+    let AltText = "voltar"
+    if(pTaxaJ.innerHTML == AltText) {
+        pTaxaJ.innerHTML = "Taxa de Juros"
+    } else {
+        pTaxaJ.innerHTML = AltText
+    }
 })
 
 setTimeout(function() {
     taxaJurosBotao.click()
-},300)
+},400)
