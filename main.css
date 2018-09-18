@@ -251,7 +251,7 @@ body {
 .calculator {
     max-width: 340px;
     width: 80vw;
-    height: 420px;
+    height: 450px;
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -325,7 +325,7 @@ body {
 
 
 .input {
-    height: 55px;
+    height: 60px;
     width: 100%;
     position:relative;
 }
