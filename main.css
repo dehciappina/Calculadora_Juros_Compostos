@@ -358,11 +358,13 @@ body {
     text-align: center;
     width: auto;
     opacity: 0;
+    visibility: hidden;
     transition: 0.5s ease;
 }
 
 .input:hover p {
     opacity: 1;
+    visibility: visible;
 }
 
 
