@@ -251,7 +251,7 @@ body {
 .calculator {
     max-width: 340px;
     width: 80vw;
-    height: 340px;
+    height: 420px;
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -278,10 +278,9 @@ body {
 
 .calculator input {
     height: 55px;
-    padding: 10px;
+    padding: 10px 34px;
     box-sizing: border-box;
     font-size: 18px;
-    text-align: center;
     background: rgba(255,255,255,0.3);
     border: none;
     color: white;
@@ -328,6 +327,7 @@ body {
 .input {
     height: 55px;
     width: 100%;
+    position:relative;
 }
 
 .input div {
@@ -338,9 +338,33 @@ body {
     transform: skewY(50deg) translateY(5px);
 }
 
+.input img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+}
 
+.input p {
+    color: white;
+    position: absolute;
+    left: 0;
+    padding-left: 34px;
+    top: 0;
+    bottom: 0;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    opacity: 0;
+    transition: 0.5s ease;
+}
 
-
+.input:hover p {
+    opacity: 1;
+}
 
 
 
