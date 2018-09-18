@@ -277,7 +277,7 @@ body {
 
 
 .calculator input {
-    height: 55px;
+    height: 100%;
     padding: 10px 34px;
     box-sizing: border-box;
     font-size: 18px;
@@ -333,7 +333,7 @@ body {
 .input div {
     width: 8px;
     background: rgba(255,255,255,0.5);
-    height: 55px;
+    height: 100%;
     position: absolute;
     transform: skewY(50deg) translateY(5px);
 }
@@ -346,17 +346,12 @@ body {
 }
 
 .input p {
-    color: white;
+    color: rgba(255,255,255,0.7);
     position: absolute;
-    left: 0;
-    padding-left: 34px;
-    top: 0;
-    bottom: 0;
-    font-size: 18px;
-    display: flex;
+    left: 5%;
+    bottom: 3%;
+    font-size: 16px;
     text-align: center;
-    align-items: center;
-    height: 100%;
     width: auto;
     opacity: 0;
     transition: 0.5s ease;
