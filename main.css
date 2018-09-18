@@ -346,10 +346,14 @@ body {
 }
 
 .input p {
-    color: rgba(255,255,255,0.7);
+    color: #00838F;
+    background: rgba(255,255,255,0.9);
+    padding: 10px;
     position: absolute;
-    left: 5%;
-    top: 3%;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
     font-size: 16px;
     text-align: center;
     width: auto;
