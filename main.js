@@ -65,6 +65,6 @@ taxaJurosBotao.addEventListener('click', function() {
     }
 })
 
-setTimeout(function() {
-    taxaJurosBotao.click()
-},400)
+// setTimeout(function() {
+//     taxaJurosBotao.click()
+// },400)
