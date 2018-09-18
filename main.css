@@ -278,7 +278,7 @@ body {
 
 .calculator input {
     height: 100%;
-    padding: 10px 34px;
+    padding: 10px 34px 10px 34px;
     box-sizing: border-box;
     font-size: 18px;
     background: rgba(255,255,255,0.3);
@@ -349,7 +349,7 @@ body {
     color: rgba(255,255,255,0.7);
     position: absolute;
     left: 5%;
-    bottom: 3%;
+    top: 3%;
     font-size: 16px;
     text-align: center;
     width: auto;
