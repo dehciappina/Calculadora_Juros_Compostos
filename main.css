@@ -5,7 +5,7 @@ html {
 
 :root {
     --default-transition:0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-    --default-transition-2: 0.4s ease-in-out;
+    --default-transition-2: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
@@ -255,7 +255,7 @@ body {
     justify-content: space-between;
     flex-direction: column;
     top: 200px;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     opacity: 0;
     visibility: hidden;
     transition: var(--default-transition-2);
@@ -268,7 +268,7 @@ body {
 }
 
 .calculator_show {
-    transform:translateY(0%);
+    transform:translateX(0%);
     opacity: 1;
     visibility: visible;
 }
@@ -422,12 +422,17 @@ body {
 }
 
 #res_number {
-    color:#00838F;
     font-size: 30px;
     font-weight: 100;
 }
 
+.calc_results > aside {
+    color:#00838F;
+}
 
+.calc_results > aside h4 {
+    font-weight: 100;
+}
 
 
 
