@@ -79,7 +79,9 @@ let inputValorPresente = document.querySelector('#inputValorPresente')
 let inputValorParcela = document.querySelector('#inputValorParcela')
 let inputQteParcelas = document.querySelector('#inputQteParcelas')
 let inputValorFuturo = document.querySelector('#inputValorFuturo')
-let areaResultado = document.querySelector('#result_area')
+
+let areaResultado = document.querySelector('.calc_results')
+let areaResultadoH3 = document.querySelector('#res_number')
 
 
 // iVP_value = Number(inputValorPresente.value)
@@ -134,11 +136,13 @@ function calcularTaxaJuros() {
     // }
 
 
-    alert(
-        `
-        Taxa de Juros = ${(i * 100).toFixed(3)}%
-        `
-    )
+    // alert(
+    //     `
+    //     Taxa de Juros = ${(i * 100).toFixed(3)}%
+    //     `
+    // )
+    areaResultado.classList.add('calc_results_appear')
+    areaResultadoH3.innerHTML = `${(i * 100).toFixed(3)}%`
 }
 
 
