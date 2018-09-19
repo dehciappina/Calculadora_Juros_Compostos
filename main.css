@@ -338,33 +338,44 @@ body {
 }
 
 .input div {
-    width: 8px;
-    background: rgba(255,255,255,0.7);
+    width: 11px;
+    background: rgba(255,255,255,0.3);
     height: 63%;
     position: absolute;
     bottom: 0;
-    transform: skewY(50deg) translateY(5px);
+    transform: skewY(40deg) translateY(5px);
 }
 
-.input img {
+.input aside {
     position: absolute;
     right: 0;
     top: 0;
     height: 38%;
+    background: rgba(255,255,255,0.9);
+    width: 15%;
+    clip-path: polygon(10px 0px, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 25px;
+    padding: 3%;
+    box-sizing: border-box;
+    color: #00838F;
 }
 
 .input p {
     color: #00838F;
-    background: linear-gradient(0deg, rgba(255,255,255,0.4), rgba(255,255,255,0.8) 80%);
+    background: rgba(255,255,255,0.9);
     position: relative;
     font-size: 18px;
     text-align: center;
-    width: auto;
+    width: 85%;
     transition: 0.5s ease;
     height: 38%;
     display: flex;
     justify-content: center;
     align-items: center;
+    clip-path: polygon(10px 0px, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
 }
 
 .input:hover p {
