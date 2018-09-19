@@ -100,7 +100,7 @@ function calcularTaxaJuros() {
     QteP_value = Number(inputQteParcelas.value)
     
     if(campo2 == "" || campo2 == 0) {
-        areaResultado.innerHTML = (((campo3 / Math.abs(campo1)) ** (1 / QteP_value) - 1) * 100).toFixed(4)
+        // areaResultado.innerHTML = (((campo3 / Math.abs(campo1)) ** (1 / QteP_value) - 1) * 100).toFixed(4)
         console.log('PRIMEIRO IF')
     } else {
         console.log('PRIMEIRO ELSE')
@@ -141,8 +141,11 @@ function calcularTaxaJuros() {
     //     Taxa de Juros = ${(i * 100).toFixed(3)}%
     //     `
     // )
-    areaResultado.classList.add('calc_results_appear')
-    areaResultadoH3.innerHTML = `${(i * 100).toFixed(3)}%`
+
+    setTimeout(function() {
+        areaResultado.classList.add('calc_results_appear')
+        areaResultadoH3.innerHTML = `${(i * 100).toFixed(3)}%`
+    }, 200)
 }
 
 
