@@ -100,7 +100,7 @@ function calcularTaxaJuros() {
     QteP_value = Number(inputQteParcelas.value)
     
     if(campo2 == "" || campo2 == 0) {
-        // areaResultado.innerHTML = (((campo3 / Math.abs(campo1)) ** (1 / QteP_value) - 1) * 100).toFixed(4)
+        i = (((campo3 / Math.abs(campo1)) ** (1 / QteP_value) - 1))
         console.log('PRIMEIRO IF')
     } else {
         console.log('PRIMEIRO ELSE')

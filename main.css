@@ -20,7 +20,7 @@ body {
 }
 
 .main_header {
-    height: 70px;
+    height: 60px;
     min-width: 360px;
     width: 100%;
     background: linear-gradient(0deg,#9BD5DE, #00838F);
@@ -40,7 +40,7 @@ body {
     height: 50px;
     position: absolute;
     right: 95%;
-    top: 10px;
+    top: 5px;
     transform: translateX(100%);
     transition: 0.3s 0.2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
@@ -58,7 +58,7 @@ body {
     position: absolute;
     cursor: pointer;
     right: calc(10px + 5%);
-    top: 15px;
+    top: 10px;
     transition:var(--default-transition);
 }
 
