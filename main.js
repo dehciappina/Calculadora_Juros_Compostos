@@ -1,13 +1,13 @@
-let hamburguer = document.querySelector('.hamburguer')
+const hamburguer = document.querySelector('.hamburguer')
 
-let hamburguer1 = document.querySelector('.hamburguer div:first-child')
-let hamburguer2 = document.querySelector('.hamburguer div:nth-child(2)')
-let hamburguer3 = document.querySelector('.hamburguer div:last-child')
+const hamburguer1 = document.querySelector('.hamburguer div:first-child')
+const hamburguer2 = document.querySelector('.hamburguer div:nth-child(2)')
+const hamburguer3 = document.querySelector('.hamburguer div:last-child')
 
-let logo = document.querySelector('.main_header > img')
-let mainHeader = document.querySelector('.main_header')
+const logo = document.querySelector('.main_header > img')
+const mainHeader = document.querySelector('.main_header')
 
-let headerMenu = document.querySelector('.header_menu')
+const headerMenu = document.querySelector('.header_menu')
 
 
 hamburguer.addEventListener('click', function() {
@@ -34,15 +34,15 @@ hamburguer.addEventListener('click', function() {
 
 
 
-let mainContainerH2 = document.querySelector('.main_container > h2')
-let taxaJurosBotao = document.querySelector('#taxaJuros')
-let valorParcelaBotao = document.querySelector('#valorParcela')
-let valorPresenteBotao = document.querySelector('#valorPresente')
-let valorFuturoBotao = document.querySelector('#valorFuturo')
-let calculator = document.querySelector('.calculator')
+const mainContainerH2 = document.querySelector('.main_container > h2')
+const taxaJurosBotao = document.querySelector('#taxaJuros')
+const valorParcelaBotao = document.querySelector('#valorParcela')
+const valorPresenteBotao = document.querySelector('#valorPresente')
+const valorFuturoBotao = document.querySelector('#valorFuturo')
+const calculator = document.querySelector('.calculator')
 
-let pTaxaJ = document.querySelector('#taxaJuros p')
-let imgTaxaJ = document.querySelector('#taxaJuros img')
+const pTaxaJ = document.querySelector('#taxaJuros p')
+const imgTaxaJ = document.querySelector('#taxaJuros img')
 
 taxaJurosBotao.addEventListener('click', function() {
     mainContainerH2.classList.toggle('main_container_h2_hidden')
@@ -73,14 +73,14 @@ taxaJurosBotao.addEventListener('click', function() {
 
 /* === CALC AREA === */
 
-let calcButton = document.querySelector('#calcButton')
+const calcButton = document.querySelector('#calcButton')
 
-let inputValorPresente = document.querySelector('#inputValorPresente')
-let inputValorParcela = document.querySelector('#inputValorParcela')
-let inputQteParcelas = document.querySelector('#inputQteParcelas')
-let inputValorFuturo = document.querySelector('#inputValorFuturo')
+const inputValorPresente = document.querySelector('#inputValorPresente')
+const inputValorParcela = document.querySelector('#inputValorParcela')
+const inputQteParcelas = document.querySelector('#inputQteParcelas')
+const inputValorFuturo = document.querySelector('#inputValorFuturo')
 
-let areaResultado = document.querySelector('.calc_results')
+const areaResultado = document.querySelector('.calc_results')
 let areaResultadoH3 = document.querySelector('#res_number')
 
 
@@ -146,7 +146,12 @@ function calcularTaxaJuros() {
         areaResultado.classList.add('calc_results_appear')
         areaResultadoH3.innerHTML = `${(i * 100).toFixed(3)}%`
     }, 200)
+    return;
 }
 
 
 calcButton.addEventListener('click', calcularTaxaJuros)
+
+
+
+const redoButton = document.querySelector('.redo_res');
