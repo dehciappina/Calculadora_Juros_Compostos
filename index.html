@@ -57,35 +57,36 @@
 
                 <article class="input">
                     <div></div>
-                    <p>Valor Presente (R$)</p>
-                    <input type="number" placeholder="R$"/>
+                    <p>Valor Presente</p>
+                    <input type="number" placeholder="R$" id="inputValorPresente"/>
                     <img src="assets/info.svg" alt="informação sobre a variável">
                 </article>
 
                 <article class="input">
                     <div></div>
                     <p>Valor da Parcela</p>
-                    <input type="number" placeholder="R$"/>
+                    <input type="number" placeholder="R$" id="inputValorParcela"/>
                     <img src="assets/info.svg" alt="informação sobre a variável">
                 </article>
 
                 <article class="input">
                     <div></div>
                     <p>Quantidade de parcelas</p>
-                    <input type="number" placeholder="meses"/>
+                    <input type="number" placeholder="meses" id="inputQteParcelas"/>
                     <img src="assets/info.svg" alt="informação sobre a variável">
                 </article>
                 
                 <article class="input">
                     <div></div>
-                    <p>Valor Futuro (R$)</p>
-                    <input type="number" placeholder="R$"/>
+                    <p>Valor Futuro</p>
+                    <input type="number" placeholder="R$" id="inputValorFuturo"/>
                     <img src="assets/info.svg" alt="informação sobre a variável">
                 </article>
 
-                <button>
+                <button type="button" id="calcButton">
                     <div>
                         <img src="assets/confirm_calc.svg" alt="">
+                        <p id="result_area"></p>
                     </div>
                 </button>
         </section>

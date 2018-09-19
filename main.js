@@ -68,3 +68,79 @@ taxaJurosBotao.addEventListener('click', function() {
 // setTimeout(function() {
 //     taxaJurosBotao.click()
 // },400)
+
+
+
+/* === CALC AREA === */
+
+let calcButton = document.querySelector('#calcButton')
+
+let inputValorPresente = document.querySelector('#inputValorPresente')
+let inputValorParcela = document.querySelector('#inputValorParcela')
+let inputQteParcelas = document.querySelector('#inputQteParcelas')
+let inputValorFuturo = document.querySelector('#inputValorFuturo')
+let areaResultado = document.querySelector('#result_area')
+
+
+// iVP_value = Number(inputValorPresente.value)
+// vPar_value = Number(inputValorParcela.value)
+// QteP_value = Number(inputQteParcelas.value)
+// VF_value = Number(inputValorFuturo.value)
+
+let soma = 0;
+let i = 0;
+
+function calcularTaxaJuros() {
+
+    campo1 = Number(inputValorPresente.value)
+    campo2 = Number(inputValorParcela.value)
+    campo3 = Number(inputValorFuturo.value)
+    QteP_value = Number(inputQteParcelas.value)
+    
+    if(campo2 == "" || campo2 == 0) {
+        areaResultado.innerHTML = (((campo3 / Math.abs(campo1)) ** (1 / QteP_value) - 1) * 100).toFixed(4)
+        console.log('PRIMEIRO IF')
+    } else {
+        console.log('PRIMEIRO ELSE')
+        if(Math.abs(campo2) >= 1) {
+            console.log('SEGUNDO IF')
+            while(soma < Math.abs(campo2)) {
+                i = i + 0.000001;
+                soma = (((1 + i) ** QteP_value * i) / ((1 + i) ** QteP_value - 1)) * Math.abs(campo1)
+            }
+        }
+
+        
+        if(Math.abs(campo3) >= 1) {
+            console.log('TERCEIRO IF')
+            if(campo3 > (campo2 * QteP_value)) {
+                console.log('QUARTO IF')
+                while(soma < Math.abs(campo3)) {
+                    i = i + 0.000001;
+                    soma = Math.abs(campo1) * (1 + i) ** QteP_value + campo2 * ((1 + i) ** QteP_value - 1) / i
+                    // console.log(i)
+                }
+                console.log('FIM')
+            }
+        }
+    }
+    
+
+    // while(soma < vPar_value) {
+    //     i = i + 0.00001;
+    //     soma = (((1 + i) ** QteP_value * i / 100) / ((1 + i) ** QteP_value - 1)) * iVP_value
+    //     // soma = pvValue + nValue + valorParcelaValue;
+    //     console.log(i)
+    // }
+
+
+    alert(
+        `
+        i = ${i * 100}
+        soma = ${soma}
+        `
+    )
+}
+
+
+calcButton.addEventListener('click', calcularTaxaJuros)

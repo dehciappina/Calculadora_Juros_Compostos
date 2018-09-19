@@ -5,7 +5,7 @@ html {
 
 :root {
     --default-transition:0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-    --default-transition-2: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    --default-transition-2: 0.4s ease-in-out;
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
