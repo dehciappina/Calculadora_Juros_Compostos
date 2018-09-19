@@ -136,8 +136,7 @@ function calcularTaxaJuros() {
 
     alert(
         `
-        i = ${i * 100}
-        soma = ${soma}
+        Taxa de Juros = ${(i * 100).toFixed(3)}%
         `
     )
 }
