@@ -149,12 +149,12 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 250px;
+    margin-bottom: 330px;
     position: relative;
 }
 
 .calc_option_ontop {
-    top:-80px !important;
+    top:-100px !important;
     background: rgba(255,255,255,0.4) !important;
 }
 .calc_options > article:nth-child(1) {
@@ -249,12 +249,12 @@ body {
 .calculator {
     max-width: 340px;
     width: 80vw;
-    height: 550px;
+    height: 610px;
     position: absolute;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    top: 200px;
+    top: 170px;
     transform: translateX(-100%);
     opacity: 0;
     visibility: hidden;
