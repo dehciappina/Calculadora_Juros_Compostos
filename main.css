@@ -386,14 +386,14 @@ body {
 }
 
 .input aside::after {
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam";
     position: absolute;
     top: 0;
     background: rgba(255,255,255,0.9);
     color: #00838F;
     max-width: 340px;
     width: 80vw;
-    height: 29vh;
+    height: auto;
+    max-height: 200px;
     transform: translateY(-100%);
     overflow-y: scroll;
     overflow-x: hidden;
@@ -407,10 +407,26 @@ body {
     border-radius: 10px;
 }
 
-.input aside:hover:after {
-    opacity: 1;
-    visibility: visible;
-}
+    .inputVP aside::after {
+        content: "Valor atual ou principal sem influência do juros. Exemplo: valor de empréstimo obtido";
+    }
+
+    .inputVDP aside::after {
+        content: "Parcela mensal com juros = prestação. Também conhecida como PMT ou PGTO.";
+    }
+
+    .inputQP aside::after {
+        content: "Número de prestações mensais em que ocorrem amortizações do principal";
+    }
+
+    .inputVF aside::after {
+        content: "valor presente acrescido do juros = montante. Exemplo: se houver parcelas, é a multiplicação de sua quantidade pelo seu valor.";
+    }
+
+        .input aside:hover:after {
+            opacity: 1;
+            visibility: visible;
+        }
 
 .input p {
     color: #00838F;
