@@ -380,7 +380,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     font-size: 25px;
-    padding: 2%;
+    padding: 3%;
     box-sizing: border-box;
     color: white;
 }
@@ -388,7 +388,7 @@ body {
 .input aside::after {
     position: absolute;
     top: 0;
-    background: rgba(255,255,255,0.9);
+    background: #ff8;
     color: #00838F;
     max-width: 340px;
     width: 80vw;
