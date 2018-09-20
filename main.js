@@ -92,6 +92,18 @@ let areaResultadoH3 = document.querySelector('#res_number')
 let soma = 0;
 let i = 0;
 
+function girarRes() {
+    if(calcButton.classList.contains('button_rotate')) {
+        calcButton.classList.remove('button_rotate')
+        areaResultado.classList.remove('calc_results_appear')
+    } else {
+        calcButton.classList.add('button_rotate')
+        setTimeout(function() {
+            areaResultado.classList.add('calc_results_appear')
+        },450)
+    }
+}
+
 function calcularTaxaJuros() {
 
     campo1 = Number(inputValorPresente.value)
@@ -142,10 +154,11 @@ function calcularTaxaJuros() {
     //     `
     // )
 
-    setTimeout(function() {
-        areaResultado.classList.add('calc_results_appear')
         areaResultadoH3.innerHTML = `${(i * 100).toFixed(3)}%`
-    }, 200)
+        
+    i = 0;
+    soma = 0;
+    girarRes()
     return;
 }
 
@@ -155,3 +168,8 @@ calcButton.addEventListener('click', calcularTaxaJuros)
 
 
 const redoButton = document.querySelector('.redo_res');
+
+redoButton.addEventListener('click', function() {
+    calcularTaxaJuros()
+    console.log('NKADSKPADSMMDASKP')
+})
