@@ -332,7 +332,7 @@ body {
     padding: 0;
     max-width: 340px;
     width: 80vw;
-    box-shadow: 0 -10px 30px 0px rgba(0, 131, 143, 0.6), 0 0 0 5px white;
+    box-shadow: 0 0 0 5px white, 0 -10px 30px 0px #00838f;
     transition: 0.6s ease-in-out;
     transform: rotateX(0deg);
     position: absolute;
@@ -374,16 +374,42 @@ body {
     right: 0;
     top: 0;
     height: 38%;
-    background: rgba(255,255,255,0.9);
-    width: 15%;
-    clip-path: polygon(10px 0px, 100% 0%, 100% 100%, 0% 100%);
+    background: rgba(255,255,255,0.4);
+    width: 10%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     font-size: 25px;
-    padding: 3%;
+    padding: 2%;
     box-sizing: border-box;
+    color: white;
+}
+
+.input aside::after {
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam";
+    position: absolute;
+    top: 0;
+    background: rgba(255,255,255,0.9);
     color: #00838F;
+    max-width: 340px;
+    width: 80vw;
+    height: 29vh;
+    transform: translateY(-100%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 18px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.input aside:hover:after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .input p {
@@ -392,13 +418,12 @@ body {
     position: relative;
     font-size: 18px;
     text-align: center;
-    width: 85%;
+    width: 90%;
     transition: 0.5s ease;
     height: 38%;
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(10px 0px, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
 }
 
 .input:hover p {

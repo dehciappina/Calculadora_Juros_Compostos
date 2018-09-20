@@ -73,16 +73,17 @@ taxaJurosBotao.addEventListener('click', function() {
 
 /* === CALC AREA === */
 
-const calcButton = document.querySelector('#calcButton')
+const calcButton = document.querySelector('#calcButton');
 
-const inputValorPresente = document.querySelector('#inputValorPresente')
-const inputValorParcela = document.querySelector('#inputValorParcela')
-const inputQteParcelas = document.querySelector('#inputQteParcelas')
-const inputValorFuturo = document.querySelector('#inputValorFuturo')
+const inputValorPresente = document.querySelector('#inputValorPresente');
+const inputValorParcela = document.querySelector('#inputValorParcela');
+const inputQteParcelas = document.querySelector('#inputQteParcelas');
+const inputValorFuturo = document.querySelector('#inputValorFuturo');
 
-const areaResultado = document.querySelector('.calc_results')
-let areaResultadoH3 = document.querySelector('#res_number')
+const areaResultado = document.querySelector('.calc_results');
+let areaResultadoH3 = document.querySelector('#res_number');
 
+let formulaValue;
 
 // iVP_value = Number(inputValorPresente.value)
 // vPar_value = Number(inputValorParcela.value)
@@ -106,10 +107,10 @@ function girarRes() {
 
 function calcularTaxaJuros() {
 
-    campo1 = Number(inputValorPresente.value)
-    campo2 = Number(inputValorParcela.value)
-    campo3 = Number(inputValorFuturo.value)
-    QteP_value = Number(inputQteParcelas.value)
+    campo1 = Number(inputValorPresente.value);
+    campo2 = Number(inputValorParcela.value);
+    campo3 = Number(inputValorFuturo.value);
+    QteP_value = Number(inputQteParcelas.value);
     
     if(campo2 == "" || campo2 == 0) {
         i = (((campo3 / Math.abs(campo1)) ** (1 / QteP_value) - 1))
@@ -168,8 +169,15 @@ calcButton.addEventListener('click', calcularTaxaJuros)
 
 
 const redoButton = document.querySelector('.redo_res');
+const formulaButton = document.querySelector('.formula_res')
+const resetButton = document.querySelector('.reset_res')
+const copyButton = document.querySelector('.copy_res')
 
 redoButton.addEventListener('click', function() {
     calcularTaxaJuros()
     console.log('NKADSKPADSMMDASKP')
+})
+
+formulaButton.addEventListener('click', function() {
+    alert()
 })
